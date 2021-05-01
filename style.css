@@ -1,0 +1,106 @@
+body
+{
+  color: white;
+  background-color:cornsilk;
+}
+span
+{
+  font-size: 30px;
+}
+#camera , #result
+{
+  border: 2px dashed black;
+  width: 350px;
+  height: 300px; 
+}
+#result_emotion_name ,#result_emotion_name2  
+{
+  color: black;
+}
+.emotion_name
+{
+  font-size: 40px;
+}
+.emoji
+{
+  font-size:48px;
+}
+.heading{
+  font-size: 30px;
+  border-radius: 10px;
+  letter-spacing: 3px;
+  font-family: 'Turret Road', cursive;
+}
+label{
+  background-color: white;
+  color:black;
+  padding: 10px;
+  padding-right: 15px;
+  border-radius: 5px;
+}
+#change{
+    cursor: pointer;
+}
+#dropdown{
+    visibility:hidden;
+    background-color: white;
+  color:black;
+    width: 130px;
+    border-radius: 10px;
+    height: 0px;
+}
+#div1{
+    width: 130px!important;
+    border-radius: 10px;
+}
+#Webcam{
+    font-size: 15px;
+
+}
+#div1:hover{
+    background-color: darkgray;
+    cursor: pointer;
+    
+}
+#div2{
+    width: 130px!important;
+    border-radius: 10px;
+margin-top: -40px;
+}
+#div2:hover{
+    background-color: darkgray;
+    cursor: pointer;
+    
+}
+#File{
+    font-size: 15px;
+}
+#change{
+    width:130px;
+}
+#camera1{
+  border-color: black;
+  border-style: dashed;
+  border-width: 3px;
+  height: auto;
+  width: 300px;
+  width: 350px;
+  height: 0px; 
+  visibility: hidden;
+}
+.smol{
+  width: 200px!important;
+}
+#stop it{
+  margin-left: 50px!important;
+}
+#no{
+  margin-left: 50px!important;
+  color: black;
+}
+#nou{
+  background-color:forestgreen;
+  border-radius: 10px!important;
+  height: 30px!important;
+  width: 150px!important;
+}

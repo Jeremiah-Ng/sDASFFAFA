@@ -1,0 +1,92 @@
+<html>
+
+<head>
+  <title>Emotion To Emoji</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Turret+Road:wght@500&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <center>
+      <h1 class="btn btn-success heading">HAND SYMBOL APP
+        <br>
+        <span>&#9996;</span>
+        <span>&#128076;</span>
+        <span>&#128077;</span>
+        <br>
+      </h1>
+      <br><br>
+
+
+      <div class="col-md-4 col-sm-12 col-xs-12">
+          <div id="stuff">
+        <label id="change" onclick="update()">Webcam View - </label>
+          </div>
+              <div id="dropdown">
+              <div id="div1" onclick="webcam()">
+              <span id="Webcam">Webcam</span>
+              </div>
+                  <hr>
+               <div id="div2" onclick="files()">
+              <span id="File">Files</span>
+              </div></div>
+        <div id="camera"></div>
+          <div id="camera1">
+                 <br>
+                 <img id="output" class="smol" src="ye%20boiiiiiiiiii.webp">
+                 <br>
+                 <center>
+                     <div id="stop it"> <input id="no" type="file" accept="image/*" onchange="loadFile(event)"></div>
+                     <script>
+                         var loadFile = function(event) {
+                             var reader = new FileReader();
+                             reader.onload = function() {
+                                 var output = document.getElementById('output');
+                                 output.src = reader.result;
+                             };
+                             reader.readAsDataURL(event.target.files[0]);
+                         };
+
+                     </script>
+                 </center>
+
+             </div>
+        <br>
+        <button onclick="takeSnapshot()" class="btn btn-success">Take Picture</button>
+      </div>
+      <div class="col-md-4 col-sm-12 col-xs-12">
+        <label>Prediction 1 - </label>
+        <p class="emotion_name" id="result_emotion_name"></p>
+        <p class="emoji" id="update_emotion"></p>
+        <label>Prediction 2 - </label>
+        <p class="emotion_name" id="result_emotion_name2"></p>
+        <p class="emoji" id="update_emotion2"></p>
+      </div>
+      <div class="col-md-4 col-sm-12 col-xs-12">
+        <label>Snapshot - </label>
+        <div id="result"></div>
+        <br>
+        <button onclick="identify()" class="btn btn-success">Identify</button>
+        <br><br>
+
+      </div>
+
+    </center>
+
+  </div>
+
+  <script src="main.js"></script>
+
+</body>
+
+</html>
